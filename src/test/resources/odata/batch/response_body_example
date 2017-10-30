@@ -1,0 +1,71 @@
+--batch_537b5d62-b54d-4ac5-be94-7b85c80c5a9a
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+DataServiceVersion: 1.0
+Record-Count: 1
+Content-Length: 222
+
+{
+"d" : {
+"__metadata" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Candidate('test_id')", "type" : "SFOData.Candidate"
+}, "candidateId" : "test_id", "lastName" : "testLastName", "firstName" : "testFirstName"
+}
+}
+
+--batch_537b5d62-b54d-4ac5-be94-7b85c80c5a9a
+Content-Type: multipart/mixed; boundary=changeset_c8b1b335-5003-479c-8729-32c6b4cc393e
+
+--changeset_c8b1b335-5003-479c-8729-32c6b4cc393e
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 201 Created
+Content-Type: application/json; charset=utf-8
+Location: https://apisalesdemo2.successfactors.eu/odata/v2/Candidate%283061L%29
+DataServiceVersion: 1.0
+Content-Length: 295
+
+{
+"d" : {
+"__metadata" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Candidate(3061L)", "type" : "SFOData.Candidate"
+}, "cellPhone" : "13512344321", "lastName" : "李", "firstName" : "四", "primaryEmail" : "lisi1234@test1234.com", "country" : "China", "candidateId" : "3061"
+}
+}
+
+--changeset_c8b1b335-5003-479c-8729-32c6b4cc393e
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 200 OK
+Content-Type: application/atom+xml; charset=utf-8
+DataServiceVersion: 1.0
+Content-Length: 616
+
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"><entry><content type="application/xml"><m:properties><d:key m:null="true"></d:key><d:status>OK</d:status><d:editStatus>UPDATED</d:editStatus><d:message>Candidate has been updated successfully</d:message><d:index m:type="Edm.Int32">0</d:index><d:httpCode m:type="Edm.Int32">204</d:httpCode><d:inlineResults m:type="Bag(SFOData.UpsertResult)"></d:inlineResults></m:properties></content></entry></feed>
+
+--changeset_c8b1b335-5003-479c-8729-32c6b4cc393e--
+
+--batch_537b5d62-b54d-4ac5-be94-7b85c80c5a9a
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+DataServiceVersion: 1.0
+Record-Count: 1
+Content-Length: 210
+
+{
+"d" : {
+"__metadata" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Candidate('test_id')", "type" : "SFOData.Candidate"
+}, "candidateId" : "test_id", "lastName" : "张", "firstName" : "三-upsert"
+}
+}
+
+--batch_537b5d62-b54d-4ac5-be94-7b85c80c5a9a--

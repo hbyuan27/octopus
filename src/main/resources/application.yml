@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active: dev
+  main:
+    banner-mode: "off"
+
+---
+
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/octopus?useSSL=false
+    password: root
+    username: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        
+---
+
+spring:
+  profiles: test
+  jpa:
+    database: HSQL
