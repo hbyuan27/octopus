@@ -271,6 +271,19 @@ public class SFODataService {
       default:
         break;
       }
+    } else {
+      // TODO parse error message with other access types
+      String acceptType = params.getAcceptType();
+      if (MediaType.APPLICATION_JSON_UTF8_VALUE.equals(acceptType)) {
+        String errMsg = null;
+        try {
+          // for SF OData error message only
+          errMsg = JSONObject.parseObject(response.getContent()).getJSONObject("error").getJSONObject("message")
+              .getString("value");
+        } catch (Exception e) {
+        }
+        response.setContent(errMsg);
+      }
     }
 
     return response;
